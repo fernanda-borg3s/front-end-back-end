@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <script src="jquery-3.6.0.min.js" defer></script>
+        <script src="projeto.js" defer></script>
+    </head>
+
+<body>
+    <nav>
+        <a href="#">HOME</a>
+        <a href="produtos.html">PRODUTOS</a>
+    </nav>
+    <section>
+        <div id="container">
+            <div id="coluna1">
+                <img id="img-logo" src="school_things.png" alt="">
+                <h1>Bem-vindo Usuário A!</h1>
+                    <input type="text" placeholder="Nome do Produto " class="pesquisar-produto" value="">
+                    <button class="btn-pesquisar">Pesquisar</button>
+                    <button class="btn-estoque">Conferir Estoque</button>
+                    <!-- <button class="btn-estoque"><a href=""></a> Estoque</button> -->
+                    <div id="resultado-pesquisa">
+                        <p class="produto">Nome do produto</p>
+                        <p class="cod">Codigo</p>
+                        <p class="qtd">Quantidade em estoque</p>
+                        <p class="valor">Preço</p>
+                        <p class="error"></p>
+                    </div>
+            </div>
+            <div id="coluna2">
+                <h2>Cadastrar Produto</h2>
+                    <label for="produto">Nome do Produto:</label><br>
+                    <input id="prod" type="text" name="produto" placeholder="Produto..." required autofocus>
+                    <div class="qtd-preço">
+                        <label for="quantidade">Qtd.:</label>
+                        <input id="quant" type="number" required min="1" max="100">
+
+                        <label for="preço" class="label-preço">Preço:</label>
+                        <input id="preco" type="text" name="preço" id="" placeholder="Preço" required class="preço"><br>
+                        
+                         <p id="conf"></p>
+
+                    </div>
+                    <button type="submit" class="btn-cadastrar">Cadastrar</button><br>
+                    <button type="reset" class="btn-limpar">Limpar</button>
+            </div>
+        </div>  
+    </section>
+    <section id="card-estoque">
+        <h1 class="h1-estoque">Produtos em Estoque</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="codigo">Código</th>
+                        <th class="nome-produto"></th>Produto</th>
+                        <th class="qtd">Quantidade</th>
+                        <th class="price">Preço</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td>001</td>
+                        <td>Borracha</td>
+                        <td>101</td>
+                        <td>R$ 1,00</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Caneta Esferográfica Azul</td>
+                        <td>247</td>
+                        <td>R$ 1,50</td>
+                    </tr>
+                      <tr> <td></td> <td></td> <td></td><td></td> </tr>
+                      <tr> <td></td> <td></td> <td></td> <td></td></tr>
+                      <tr> <td></td> <td></td> <td></td> <td></td></tr>
+                      <tr> <td></td> <td></td> <td></td> <td></td></tr>
+                      <tr> <td></td> <td></td> <td></td><td></td> </tr>
+            </table>
+     <!---------------------------- JANELA MODAL --------------------------------->
+            <div id="dv-modal" class="modal">
+                <div class="modal-content ">
+                    <div class="modal-header"><h1>Atualizar</h1></div>
+                    <div class="modal-body">
+                        <label for="quantidade" id="qtd">Qtd.:</label>
+                        <input type="number" required min="1" max="100" required><br>
+                
+                        <label for="preço">Preço:</label>
+                        <input type="text" name="preço" id="price" placeholder="Preço" required class="preço">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-fechar">Fechar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-">
+                <button id="btn-atualizar">Atualizar</button>
+                <button id="btn-voltar"><a href="index.html">Voltar</a></button>
+            </div>
+    </section>
+
+        <footer>&copy; Desenvolvido por Fernanda Borges</footer>
+    </body>
+</html>

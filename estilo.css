@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Kreon',sans-serif;
+    /* overflow: hidden; */
+}
+
+/*Menu*/
+
+nav{
+    width: 100%;
+	background-color: #000000;
+	padding: 10px;
+	text-align: right;
+}
+nav a{
+	text-decoration: none;
+	padding: 10px;
+	transition: 0.3s;
+}
+nav a:link, a:active, a:visited{
+	color: #ffffff;
+}
+nav a:hover{
+	color: #79d0ff;
+}
+body{
+    background-color: white;
+}
+#container, #card-estoque{
+    width: 100vw;
+    min-width: 700px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    max-width: 60%;
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: white;
+}
+#img-logo{
+    width: 100%;
+    height: 200px;
+    margin-left: 6%;
+}
+#coluna1{
+    width: 100%;
+    min-width: 40%;
+    padding: 5% 0%;
+  
+} 
+ #coluna2{
+     width: 100%;
+    padding: 12% 5% 12% 0%;
+} 
+#conf{
+    font-size: 1rem;
+    margin: 20px 67px;
+}
+h1{
+	font-size: 2rem;
+    margin: 20px 67px;
+}
+h2{
+    margin: 20px 0;
+    font-size: 2rem;
+}
+label{
+    margin: 50px 0;
+    padding: 20px 0;
+    font-weight: bold;
+}
+.label-preço{
+    margin-left: 15%;
+
+}
+.qtd-preço{
+    margin: 15px 0;
+    padding: 0 10px; 
+}
+
+input[type="text"], input[type="url"]{
+    width: 100%;
+    font-size: 15px;
+}
+
+input.preço{
+    width: 20%;
+}
+input.pesquisar-produto{
+    margin-left: 15%;
+    width: 60%;
+    padding: 8px;
+}
+#resultado-pesquisa {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ffbd59;
+    width: 90%;
+    border-radius: 4px;
+    padding: 2% 5%;
+    margin: 2% 7%;
+}
+.btn-cadastrar, .btn-limpar, .btn-estoque, .btn-pesquisar, #btn-voltar, #btn-atualizar{
+    width: 99%;
+    padding: 5px;
+    margin: 8px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ff1616c0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-estoque, .btn-pesquisar{
+    background-color: rgba(253, 142, 98, 0.856);
+    width: 60%;
+    margin: 2% 15%;
+    cursor: pointer;
+}
+.btn-cadastrar:hover, .btn-limpar:hover, .btn-estoque a:hover, .btn-pesquisar:hover, #btn-atualizar:hover{
+    color: black;
+}
+footer{
+	margin: 20px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	
+}
+/************************ ESTOQUE  ******************/
+#card-estoque{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 0;
+}
+#container-tabela{
+    /* padding: 0% 7%; */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.h1-estoque{
+  
+    padding: 10px 20px;
+    font-size: 2rem;
+    border-bottom: 3px solid #ffbd59;
+    width: 100%;
+	
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    
+}
+thead th{
+    padding: 30px 0 30px 0;
+    font-size: 1.3rem;
+    height: 15px;
+}
+ th, td {
+    border: 2px solid black;
+    /* height: 20px; */
+    height: 50px;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+div.btn-{
+    width: 70%;
+}
+#btn-atualizar {
+    color: black;
+    background-color: #fabf67fd;
+  }
+a{
+    text-decoration: none;
+    color: white;
+  
+} 
+/*****************88 JANELA MODAL ****************8*/
+
+.modal {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    /* display: none; */
+}
+
+.modal-content {
+    margin: 0 auto;
+    margin-top: 3%;
+    width: 70%;
+    min-width: 300px;
+    background-color: #eee;
+    padding: 0;
+    box-shadow: 0 0 2px #fff;
+}
+.modal-header h1{
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-header, .modal-body,.modal-footer {
+    padding: 10px;
+}
+.modal-body label, .modal-body input{
+    margin: 8px;
+    font-size: 1.2rem;
+}
+.modal-header, .modal-footer{
+    background-color: #ffbd59;
+}
+.btn-fechar {
+    background-color: #ff1616c0;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #FFF;
+}
+.btn-fechar:hover {
+    width: 40%;
+    background-color: #ff1616;
+}
